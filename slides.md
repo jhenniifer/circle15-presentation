@@ -61,9 +61,6 @@ Here are some helpful links and tools that were recommended to be used throughou
 ## 📚 Arrays
 
 ---
-## 📌 Topic: ARRAYS  
-### 👩🏽‍💻 Circle 15 Presentation  
----
 
 ## ✅ What is an Array?
 
@@ -141,7 +138,7 @@ Changes the contents of an array by removing or replacing existing elements.
 let fruits = ["apple", "banana", "orange"];
 fruits.splice(1, 1, "grape");
 console.log(fruits); // ["apple", "grape", "orange"]
-`
+```
 
 ### 🔹  For each
 
@@ -154,3 +151,125 @@ console.log(fruits); // ["apple", "grape", "orange"]
 
 
 ```
+
+### 🔹  Filter
+
+Creates a new array with elements that pass a condition.
+
+```javascript
+const numbers = [1, 2, 3, 4, 5];
+const evens = numbers.filter(num => num % 2 === 0);
+console.log(evens); // [2, 4]
+
+```
+---
+
+## 📚 Functions
+---
+
+## 🚀 What is a Function?
+
+A **function** is a reusable block of code designed to perform a specific task. It helps break your program into smaller, manageable parts. You can call a function multiple times without rewriting code.
+
+
+## 📚 Function Syntax
+
+```js
+function functionName(parameters) {
+  // code to be executed
+}
+```
+
+ Example
+
+```js
+ function greet(name) {
+  console.log("Hello, " + name + "!");
+}
+
+greet("Jhennifer");
+```
+
+---
+
+## 🧰 Types of Function
+
+
+- Function Declaration
+```js
+function add(a, b) {
+  return a + b;
+}
+
+console.log(add(3, 4)); // 7
+```
+
+- Function Expression
+```js
+const multiply = function (x, y) {
+  return x * y;
+};
+
+console.log(multiply(5, 2)); // 10
+
+```
+
+- Arrow Function (ES6)
+
+##### This is a shorter and cleaner way to write functions.
+```js
+const divide = (a, b) => a / b;
+
+console.log(divide(10, 2)); // 5
+
+
+```
+---
+
+- Anonymous Function 
+
+##### Functions without a name, often used as callbacks.
+```js
+setTimeout(function () {
+  console.log("This runs after 2 seconds");
+}, 2000);
+
+```
+<br/>
+
+## 🔄 Returning Values from Functions
+#### Functions can return values using the return keyword.
+
+```js
+function square(num) {
+  return num * num;
+}
+
+const result = square(6);
+console.log(result); // 36
+```
+<br/>
+
+## ⚙️ Parameters vs Arguments
+Parameters are variables in function definition. Arguments on the other hand are actual values passed when calling the function
+
+---
+
+```js
+Copy code
+function sayHello(name) {  // name is a parameter
+  console.log("Hello, " + name);
+}
+
+sayHello("Chioma"); // "Chioma" is the argument
+```
+<br/>
+
+## ✅ Why Use Functions?
+1. Improves code reusability
+
+2. Easier debugging
+
+3. Clean and organized code
+
+4. Helps divide complex problems
