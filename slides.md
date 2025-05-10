@@ -58,6 +58,50 @@ Here are some helpful links and tools that were recommended to be used throughou
 
 ---
 
+## ☆ Introduction to javascript
+
+<br/>
+
+<img src="/images/javascript.svg" alt="javascript"/>
+
+---
+## 📌 Topic: JAVASCRIPT
+### 👩🏽‍💻 Circle 15 Presentation  
+---
+
+
+## 📚 Javascript
+
+Javascript is a programming language that was initially built for client-side execution, it is used to build web pages and web applications. This language makes a static web page to be dynamic and interactive. JavaScript is therefore executed in the browser.
+
+Traditionally JavaScript is used for client-side only since it is an open source project, developers were able to think, modify it and integrate Nodejs for it to serve as a server-side.
+
+JavaScript was created by a wonderful programmer, **Brendan Eich** in 1995, he then was a programmer at Netscape and he developed it in 10days. At that time JavaScript was called **"Mocha"**, before it latter became what is called now.
+
+To add interactivity to a web page, JavaScript significantly should be added to the web page or part of the web page where we want it. When users come across forms on a web page, they have no idea that adding JavaScript to the web page has made they to be able to fill the form and may also get a feedback message that the form have been submitted.
+
+---
+
+### 📌File structure
+JavaScript language is mostly written using a code editor. Each file created for JavaScript must be written in a `.js` extension for proper execution. The file name can be called `main.js`, `index.js` or `script.js.`
+
+### Implementation
+There are different ways of implementing JavaScript depending what you want to do with it.
+
+For a client-side execution: JavaScript can be used along it HTML and CSS. It can be implemented internally that is by adding the script tag `<script> </script>`inside the HTML file. It will enhance the manipulation of the html tags to modify the content.
+It can also be implemented externally by isolating its logic in a whole new file with a .js extension and hence imported in the HTML file for execution.
+`<script src='./main.js'></script>`.
+
+For Server side extension: it is only implemented in the .js file extension which can run using the command
+
+```javascript
+node server.js
+```
+
+This command will work if you have saved the file as `server.js` and vice versa.
+---
+
+
 ## 📚 Arrays
 
 <br/>
