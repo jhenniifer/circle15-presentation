@@ -377,10 +377,18 @@ console.log(fruits); // ["apple", "grape", "orange"]
 Executes a function for each element in the array
 
 ```javascript
-let fruits = ["apple", "banana", "orange"];
-fruits.splice(1, 1, "grape");
-console.log(fruits); // ["apple", "grape", "orange"]
+colors.forEach((color, index) => {
+  console.log(`${index + 1}. ${color}`);
+});
 
+```
+
+Output
+
+```js
+Color at index 0 is red  
+Color at index 1 is green  
+Color at index 2 is blue
 ```
 
 ---
