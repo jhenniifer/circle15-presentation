@@ -19,7 +19,7 @@ class: text-left text-[.7vw]
 
 | Name                           | Status       |
 |--------------------------------|--------------|
-| Ritda Evelyn Aleburu           | ✅ Active    |
+| Ritda Evelyn Aleburu           | ❌ Inactive  |
 | Asogwa Ifunanyachukwu Ruth     | ✅ Active    |
 | Marvelous Udugbesi             | ✅ Active    |
 | Motunrayo Adeneye              | ✅ Active    |
@@ -29,7 +29,7 @@ class: text-left text-[.7vw]
 | Mubarak Bello O                | ✅ Active    |
 | Chukwuma Kosiso Jennifer       | ✅ Active    |
 | Chioma Ineh                    | ✅ Active    |
-| Tochukwu Ejiofor               | ✅ Active    |
+| Tochukwu Ejiofor               | ❌ Inactive  |
 
 > We're committed to learning together and supporting each other through the journey.
 
@@ -48,14 +48,19 @@ Here are some helpful links and tools that were recommended to be used throughou
 
 ## 📚 Topics Covered
 
+<br>
+
 - Introduction to JavaScript
 - Variables & Data Types
-- Operators
-- Conditionals
+- Arrays
+- Array methods
 - Loops
+- Objects
 - Functions
-- Arrays & Objects
-- DOM Manipulation
+- DOM and BOM tree
+- Rest and Spread Operator
+- Callback functions
+
 
 ---
 
