@@ -279,6 +279,19 @@ const dog = {
 dog.bark(); // Woof!
 ```
 
+
+##  Why Use Functions?
+
+📚
+
+
+ 🔸
+ 
+ 🔹
+ 
+ ✅
+
+
 ### Shorthand Method
 
 You can write methods in a shorthand syntax.

@@ -29,6 +29,7 @@ class: text-left text-[.7vw]
 | Mubarak Bello O                | ✅ Active    |
 | Chukwuma Kosiso Jennifer       | ✅ Active    |
 | Chioma Ineh                    | ✅ Active    |
+| Ejimofor Chidera               | ✅ Active    |
 | Tochukwu Ejiofor               | ❌ Inactive  |
 
 <!-- > We're committed to learning together and supporting each other through the journey. -->
