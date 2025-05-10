@@ -1,5 +1,6 @@
 ---
 theme: default
+transition: fade
 class: text-center
 title: Circle 15 JavaScript Journey
 date: 2025-05-07
@@ -178,11 +179,8 @@ language: "Yoruba"
 <br/>
 <br/>
 <br/>
-<img src="./images/array.svg" alt="array" width="700" he/>
+<img src"./images/array.svg" alt="array" width="700" he/>
 
----
-## 📌 Topic: ARRAYS  
-### 👩🏽‍💻 Circle 15 Presentation  
 ---
 
 ## ✅ What is an Array?
@@ -361,13 +359,13 @@ From the example above the output is `["banana", "orange"]` in which the startIn
 #### 🔹Splice
 Changes the contents of an array by removing or replacing existing elements.
 
+---
+
 ```javascript
 let fruits = ["apple", "banana", "orange"];
 fruits.splice(1, 1, "grape");
 console.log(fruits); // ["apple", "grape", "orange"]
-```
-
----
+`
 
 #### 🔸ForEach
 
@@ -377,127 +375,117 @@ Executes a function for each element in the array
 let fruits = ["apple", "banana", "orange"];
 fruits.splice(1, 1, "grape");
 console.log(fruits); // ["apple", "grape", "orange"]
-``` 
 
+```
 <br/>
 
-#### 🔹IndexOf
-
-To find the index of a particular element of the array.
-
-```javascript
-let numbers = [1, 2, 3 , 4 ,5]
-console.log(numbers.indexOf(4)) // 3
-```
-
-This output 3 which is the position of number 4 of the array when we start indexing from one.
-
-``` javascript
-let numbers = [1, 2, 3 , 4 ,5] 
-console.log(numbers.indexOf("zero")) //-1
-```
-
 ---
 
-## ✅ BOM  and DOM Tree
-
-**BOM(Browser object model)**
-
-Window object main features are BOM,DOM and JavaScript Object. 
-BOM represents the additional features provided by the browser.It is a set of objects provided by the browser (not JavaScript itself) that allows JavaScript to interact with the browser window. 
- 
+## 📚Functions
 <br/>
 
-### 🔹Main BOM components
+### 🚀 What is a Function?
 
-- *window*: The global object representing the browser window.
-- *Document*: This is the part of the DOM via the BOM(window.document)
-- *Location*: This gives URL details and can redirect pages(windows.location.href)
-- *Navigator*: This gives browser info like name, version, user agent.
-- *Screen*:Gives info about the users screen(width, height)
-- *History*:This lets you move forward/backward in history 
-- *Alert/prompt/confirm*: Dialogue  boxes to interact with users.
+A **function** is a reusable block of code designed to perform a specific task. It helps break your program into smaller, manageable parts. You can call a function multiple times without rewriting code.
+
+## 📚 Function Syntax
+
+```js
+function functionName(parameters) {
+  // code to be executed
+}
+```
+
+Example
+
+```js
+ function greet(name) {
+  console.log("Hello, " + name + "!");
+}
+
+greet("Jhennifer");
+```
 
 ---
 
-### 🔸Core BOM objects 
+## 🧰 Types of Function
 
-<img src="./images/bom.jpg" alt="bom" width="300"/>
 
+- Function Declaration
+```js
+function add(a, b) {
+  return a + b;
+}
+
+console.log(add(3, 4)); // 7
+```
+
+- Function Expression
+```js
+const multiply = function (x, y) {
+  return x * y;
+};
+
+console.log(multiply(5, 2)); // 10
+
+```
+
+- Arrow Function (ES6)
+
+##### This is a shorter and cleaner way to write functions.
+```js
+const divide = (a, b) => a / b;
+
+console.log(divide(10, 2)); // 5
+
+
+```
+---
+
+- Anonymous Function 
+
+##### Functions without a name, often used as callbacks.
+```js
+setTimeout(function () {
+  console.log("This runs after 2 seconds");
+}, 2000);
+
+```
 <br/>
 
-###  🌐 BOM Examples 
+## 🔄 Returning Values from Functions
+#### Functions can return values using the return keyword.
 
-```javascript
-console.log(window.location.href);//Get current URL
+```js
+function square(num) {
+  return num * num;
+}
+
+const result = square(6);
+console.log(result); // 36
 ```
-
-```javascript
-console.log(Window.navigator.userAgent);//Get browser info 
-```
-
-```javascript
-window.location.reload();// reload the page
-```
-
-```javascript
-window.alert('Hello BOM');
-```
-
----
-
-### 🌳DOM Tree
-
-The DOM is a programming interface that allows JavaScript to read and manipulate HTML and XML document. It turns the page into a tree-like structure where each element is a node.
-
-A simple HTML Page 
-
-```html
-<!DOCTYPE html>
-<html>
-<head>
-<title>My Page</title>
-</head>
-<body>
-<h1>Hello</h1>
-<p>Welcome to the DOM!</p>
-</body>
-</html>
-```
----
-
-### 🔸Core DOM objects
-
-An illustration of a DOM tree structure.
-
-<img src="./images/DOM.png" alt="DOM tree" width="500"/>
-
-
----
-
-### 🔹DOM Method and Properties
 <br/>
 
-- *document.getElementById()*: Selects element by ID
-- *document.querySelector()*: Selects first matching element
-- *element.innerHTML*: Gets/sets HTML content
-- *element.textContent*: Gets/sets text content
-- *element.setAttribute()*:	Sets an attribute
-- *element.classList.add()*: Adds a CSS class
-- *element.style.color*: Changes inline styles
-- *document.createElement()*: Creates new HTML element
-
-<br/>
-
-### 🔸DOM Examples 
-
-```javascript
-const heading = document.queryselector(‘hi’); 
-console.log(heading.text content); //Hello DOM
-```
-```javascript
-const container = document.getElemmentById(‘container’);
-container.style.background =‘lightblue’
-```
+## ⚙️ Parameters vs Arguments
+Parameters are variables in function definition. Arguments on the other hand are actual values passed when calling the function
 
 ---
+
+```js
+Copy code
+function sayHello(name) {  // name is a parameter
+  console.log("Hello, " + name);
+}
+
+sayHello("Chioma"); // "Chioma" is the argument
+```
+<br/>
+
+## ✅ Why Use Functions?
+1. Improves code reusability
+
+2. Easier debugging
+
+3. Clean and organized code
+
+4. Helps divide complex problems
