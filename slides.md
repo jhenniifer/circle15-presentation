@@ -179,7 +179,7 @@ language: "Yoruba"
 <br/>
 <br/>
 <br/>
-<img src"./images/array.svg" alt="array" width="700" he/>
+<img src="./images/array.svg" alt="array" width="700" height="500" />
 
 ---
 
@@ -359,7 +359,6 @@ From the example above the output is `["banana", "orange"]` in which the startIn
 #### 🔹Splice
 Changes the contents of an array by removing or replacing existing elements.
 
----
 
 ```javascript
 let fruits = ["apple", "banana", "orange"];
@@ -377,7 +376,6 @@ fruits.splice(1, 1, "grape");
 console.log(fruits); // ["apple", "grape", "orange"]
 
 ```
-<br/>
 
 ---
 
@@ -489,3 +487,4 @@ sayHello("Chioma"); // "Chioma" is the argument
 3. Clean and organized code
 
 4. Helps divide complex problems
+
