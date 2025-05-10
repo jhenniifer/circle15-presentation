@@ -31,7 +31,7 @@ class: text-left text-[.7vw]
 | Chioma Ineh                    | ✅ Active    |
 | Tochukwu Ejiofor               | ❌ Inactive  |
 
-> We're committed to learning together and supporting each other through the journey.
+<!-- > We're committed to learning together and supporting each other through the journey. -->
 
 ---
 
@@ -504,7 +504,7 @@ let i = 0;
 do {
   console.log("Step:", i);
   i++;
-} while (i < 2);
+} while (i < 5);
 
 
 ```
@@ -514,13 +514,20 @@ Output
 ```js
 Step: 0  
 Step: 1
+Step: 2 
+Step: 3
+Step: 4
+
 
 ```
 <br/>
 
+---
+
 ### 🔸for...of Loop
 
 Loops through the values of an iterable like an array.
+
 
 ```js
 const colors = ["red", "blue", "green"];
@@ -530,7 +537,6 @@ for (let color of colors) {
 }
 
 ```
----
 
 Output
 
@@ -540,6 +546,9 @@ blue
 green
 ```
 <br/>
+
+---
+
 
 ### 🔸for...in Loop
 
@@ -558,7 +567,7 @@ for (let key in student) {
 
 
 ```
----
+
 
 Output
 
@@ -569,15 +578,16 @@ course: Frontend
 
 ```
 
-<br/>
+---
 
 ### 🔸break and continue
 
 ###### break : exits the loop early
 
-###### continue: skips to the next iteration
 
 <br/>
+
+
 ```js
 for (let i = 0; i < 5; i++) {
   if (i === 3) break;
@@ -595,6 +605,10 @@ Output
 
 ```
 ---
+
+###### continue: skips to the next iteration
+
+<br>
 
 ```js
 for (let i = 0; i < 5; i++) {
@@ -853,8 +867,10 @@ setTimeout(function () {
 ```
 <br/>
 
-## 🔄 Returning Values from Functions
-#### Functions can return values using the return keyword.
+### 🔄 Returning Values from Functions
+<br/>
+
+##### Functions can return values using the return keyword.
 
 ```js
 function square(num) {
@@ -864,15 +880,17 @@ function square(num) {
 const result = square(6);
 console.log(result); // 36
 ```
-<br/>
 
-## ⚙️ Parameters vs Arguments
-Parameters are variables in function definition. Arguments on the other hand are actual values passed when calling the function
 
 ---
 
+### ⚙️ Parameters vs Arguments
+Parameters are variables in function definition. Arguments on the other hand are actual values passed when calling the function
+
+
+
 ```js
-Copy code
+
 function sayHello(name) {  // name is a parameter
   console.log("Hello, " + name);
 }
@@ -881,7 +899,7 @@ sayHello("Chioma"); // "Chioma" is the argument
 ```
 <br/>
 
-## 🔸 Why Use Functions?
+#### 🔸 Why Use Functions?
 1. Improves code reusability
 
 2. Easier debugging
@@ -997,7 +1015,7 @@ container.style.background =‘lightblue’
 
 ---
 
-##  📚 REST AND SPREAD OPERATORS
+##  📚 Rest and Spread operators
 
 <br>
 
@@ -1121,7 +1139,7 @@ const olderUser = { ...user, age: 25 };
 
 ---
 
-## 📚 CALLBACK FUNCTIONS
+## 📚 Callback functions
 
 A **callback function** is a function passed into another function as an argument, which is then invoked inside the outer function to complete some kind of routine or action.
 In other words, a callback function is a function definition that is passed in as the argument of another function’s invocation.  
@@ -1139,16 +1157,16 @@ This is why functions passed as arguments are known as **Callback functions**.
 
 ---
 
-##  🔸WHAT DO WE NEED CALLBACKS FOR?
+###  🔸What do we need callback for?
 
 JavaScript code runs from top to bottom. This is called **sequential execution**. However, there are times when we want code to wait until another task is completed or an event happens.  
 This is called **asynchronous execution**.
 
-## Example: Using `setTimeout()` for Callback Simulation
+#### Example:
+ Using `setTimeout()` for Callback Simulation
 
 To simulate waiting for data from an external source, we use `setTimeout()` — a JavaScript function that delays execution.
 
-### Sample Code:
 
 ```js
 function fetchData(callback) {
@@ -1183,11 +1201,11 @@ This delay simulates something like a **server request**.
 
 ---
 
-##  ✅ WAYS OF CREATING AND USING CALLBACK FUNCTIONS
+###  ✅ Ways of creating and using callback function
 
 <br>
 
-### 🔹 Anonymous Function
+#### 🔹 Anonymous Function
 
 This is an anonymous function ( a function without a name) created and passed as an argument at the same time.
 
@@ -1199,7 +1217,7 @@ setTimeout(function() {
 
 <br>
 
-### 🔸 Arrow Function
+#### 🔸 Arrow Function
 
 Arrow function is a cleaner syntax for short callbacks.
 
@@ -1211,7 +1229,7 @@ setTimeout(() => {
 
 ---
 
-### 🔹 Defined Function as Argument
+#### 🔹 Defined Function as Argument
 
 Here we define the function first, then pass it as a callback.
 
@@ -1228,6 +1246,8 @@ runCallback(greet);
 ```
 
 ---
+class: text-center
+---
 
-
+# THANK YOU
 
