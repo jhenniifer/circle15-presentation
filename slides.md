@@ -364,7 +364,7 @@ Changes the contents of an array by removing or replacing existing elements.
 let fruits = ["apple", "banana", "orange"];
 fruits.splice(1, 1, "grape");
 console.log(fruits); // ["apple", "grape", "orange"]
-`
+```
 
 #### 🔸ForEach
 
@@ -488,3 +488,109 @@ sayHello("Chioma"); // "Chioma" is the argument
 
 4. Helps divide complex problems
 
+
+
+---
+
+## ✅ BOM  and DOM Tree
+
+**BOM(Browser object model)**
+
+Window object main features are BOM,DOM and JavaScript Object. 
+BOM represents the additional features provided by the browser.It is a set of objects provided by the browser (not JavaScript itself) that allows JavaScript to interact with the browser window. 
+ 
+<br/>
+
+### 🔹Main BOM components
+
+- *window*: The global object representing the browser window.
+- *Document*: This is the part of the DOM via the BOM(window.document)
+- *Location*: This gives URL details and can redirect pages(windows.location.href)
+- *Navigator*: This gives browser info like name, version, user agent.
+- *Screen*:Gives info about the users screen(width, height)
+- *History*:This lets you move forward/backward in history 
+- *Alert/prompt/confirm*: Dialogue  boxes to interact with users.
+
+---
+
+### 🔸Core BOM objects 
+
+<img src="./images/bom.jpg" alt="bom" width="300"/>
+
+<br/>
+
+###  🌐 BOM Examples 
+
+```javascript
+console.log(window.location.href);//Get current URL
+```
+
+```javascript
+console.log(Window.navigator.userAgent);//Get browser info 
+```
+
+```javascript
+window.location.reload();// reload the page
+```
+
+```javascript
+window.alert('Hello BOM');
+```
+
+---
+
+### 🌳DOM Tree
+
+The DOM is a programming interface that allows JavaScript to read and manipulate HTML and XML document. It turns the page into a tree-like structure where each element is a node.
+
+A simple HTML Page 
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<title>My Page</title>
+</head>
+<body>
+<h1>Hello</h1>
+<p>Welcome to the DOM!</p>
+</body>
+</html>
+```
+---
+
+### 🔸Core DOM objects
+
+An illustration of a DOM tree structure.
+
+<img src="./images/DOM.png" alt="DOM tree" width="500"/>
+
+
+---
+
+### 🔹DOM Method and Properties
+<br/>
+
+- *document.getElementById()*: Selects element by ID
+- *document.querySelector()*: Selects first matching element
+- *element.innerHTML*: Gets/sets HTML content
+- *element.textContent*: Gets/sets text content
+- *element.setAttribute()*:	Sets an attribute
+- *element.classList.add()*: Adds a CSS class
+- *element.style.color*: Changes inline styles
+- *document.createElement()*: Creates new HTML element
+
+<br/>
+
+### 🔸DOM Examples 
+
+```javascript
+const heading = document.queryselector(‘hi’); 
+console.log(heading.text content); //Hello DOM
+```
+```javascript
+const container = document.getElemmentById(‘container’);
+container.style.background =‘lightblue’
+```
+
+---
