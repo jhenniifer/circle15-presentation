@@ -779,11 +779,11 @@ console.log(student.greet()); // Hello, I'm Ada
 ## 📚Functions
 <br/>
 
-### 🚀 What is a Function?
+###  ✅ What is a Function?
 
 A **function** is a reusable block of code designed to perform a specific task. It helps break your program into smaller, manageable parts. You can call a function multiple times without rewriting code.
 
-## 📚 Function Syntax
+## 🔹Function Syntax
 
 ```js
 function functionName(parameters) {
@@ -876,7 +876,7 @@ sayHello("Chioma"); // "Chioma" is the argument
 ```
 <br/>
 
-## ✅ Why Use Functions?
+## 🔸 Why Use Functions?
 1. Improves code reusability
 
 2. Easier debugging
@@ -889,7 +889,7 @@ sayHello("Chioma"); // "Chioma" is the argument
 
 ---
 
-## ✅ BOM  and DOM Tree
+## 📚 BOM  and DOM Tree
 
 **BOM(Browser object model)**
 
@@ -964,7 +964,7 @@ An illustration of a DOM tree structure.
 
 
 ---
-
+ 
 ### 🔹DOM Method and Properties
 <br/>
 
@@ -991,4 +991,238 @@ container.style.background =‘lightblue’
 ```
 
 ---
+
+##  📚 REST AND SPREAD OPERATORS
+
+<br>
+
+#### ✅ What is the Rest Operator?
+
+The **Rest operator** (`...`) allows you to collect multiple elements and package them into a single array. It is mainly used in **function parameters** to gather all remaining arguments.
+
+#### Example: Using Rest in Function Parameters
+
+```js
+function sum(...numbers) {
+  return numbers.reduce((acc, val) => acc + val, 0);
+}
+
+console.log(sum(1, 2, 3, 4)); // 10
+```
+<br>
+
+#### 🔹 Use Cases for the Rest Operator
+
+- **Variable number of arguments**: You don’t know how many arguments will be passed to the function.
+- **Making reusable utilities**: Functions like `sum()`, `max()`, `min()` that need flexible input.
+- **Destructuring objects or arrays**: Capture the "rest" of the data after pulling out key parts.
+
+---
+
+```js
+const [first, ...rest] = [1, 2, 3, 4];
+console.log(first); // 1
+console.log(rest);  // [2, 3, 4]
+```
+
+<br>
+
+#### ✅ What is the Spread Operator?
+
+The **Spread operator** (`...`) allows you to **unpack elements** from arrays or objects. It copies or expands existing data into new structures.
+
+#### Example: Spreading in Arrays
+
+```js
+const fruits = ['apple', 'banana'];
+const moreFruits = [...fruits, 'orange', 'mango'];
+
+console.log(moreFruits); 
+// ['apple', 'banana', 'orange', 'mango']
+```
+<br>
+ 
+#### 🔸 Use Cases for the Spread Operator (Arrays)
+
+- **Copying arrays** without mutation:
+
+```js
+const original = [1, 2, 3];
+const copy = [...original];
+
+```
+---
+
+- **Combining arrays**:
+
+```js
+const boys = ['John', 'Mike'];
+const girls = ['Sara', 'Anna'];
+const all = [...boys, ...girls];
+```
+
+- **Passing array elements as function arguments**:
+
+```js
+const nums = [4, 5, 6];
+console.log(Math.max(...nums)); // 6
+```
+
+<br>
+
+#### Example: Spreading in Objects
+
+```js
+const user = { name: 'Jhennifer', age: 22 };
+const updatedUser = { ...user, country: 'Nigeria' };
+
+console.log(updatedUser);
+// { name: 'Jhennifer', age: 22, country: 'Nigeria' }
+```
+
+<br>
+
+#### 🔹Use Cases for the Spread Operator (Objects)
+
+- **Copying objects**:
+
+```js
+const copy = { ...user };
+```
+
+---
+
+- **Merging objects**:
+
+```js
+const extraInfo = { hobby: 'coding' };
+const fullProfile = { ...user, ...extraInfo };
+```
+
+- **Overwriting properties**:
+
+```js
+const olderUser = { ...user, age: 25 };
+```
+
+<br>
+
+### Rest vs Spread Summary
+
+| Operator        | Symbol | Purpose                              | Common Use Cases                                |
+|-----------------|--------|--------------------------------------|-------------------------------------------------|
+| Rest Operator   | `...`  | Collects multiple items into one     | Function parameters, array/object destructuring |
+| Spread Operator | `...`  | Spreads one item into multiple parts | Cloning, merging, passing as arguments          |
+
+---
+
+## 📚 CALLBACK FUNCTIONS
+
+A **callback function** is a function passed into another function as an argument, which is then invoked inside the outer function to complete some kind of routine or action.
+In other words, a callback function is a function definition that is passed in as the argument of another function’s invocation.  
+The callback will never run until the encompassing function executes it when the time comes. Therefore, the callback is at the mercy of the function receiving it.
+
+Functions are **objects** in JavaScript. This means:
+
+- They have the properties and methods of objects.
+- They can be passed around in the code.
+- They can take other functions as arguments.
+- They can be returned from other functions.
+- They can even have properties of their own.
+
+This is why functions passed as arguments are known as **Callback functions**.
+
+---
+
+##  🔸WHAT DO WE NEED CALLBACKS FOR?
+
+JavaScript code runs from top to bottom. This is called **sequential execution**. However, there are times when we want code to wait until another task is completed or an event happens.  
+This is called **asynchronous execution**.
+
+## Example: Using `setTimeout()` for Callback Simulation
+
+To simulate waiting for data from an external source, we use `setTimeout()` — a JavaScript function that delays execution.
+
+### Sample Code:
+
+```js
+function fetchData(callback) {
+  console.log("Fetching data...");
+  setTimeout(() => {
+    console.log("Data fetched!");
+    callback();
+  }, 5000);
+}
+```
+
+---
+
+```
+
+function processData() {
+  console.log("Processing data...");
+}
+
+fetchData(processData);
+```
+
+**Output (with delay):**
+```
+Fetching data...
+(wait 5 seconds)
+Data fetched!
+Processing data...
+```
+
+This delay simulates something like a **server request**.
+
+---
+
+##  ✅ WAYS OF CREATING AND USING CALLBACK FUNCTIONS
+
+<br>
+
+### 🔹 Anonymous Function
+
+This is an anonymous function ( a function without a name) created and passed as an argument at the same time.
+
+```js
+setTimeout(function() {
+  console.log("Callback from anonymous function");
+}, 1000);
+```
+
+<br>
+
+### 🔸 Arrow Function
+
+Arrow function is a cleaner syntax for short callbacks.
+
+```js
+setTimeout(() => {
+  console.log("Callback from arrow function");
+}, 1000);
+```
+
+---
+
+### 🔹 Defined Function as Argument
+
+Here we define the function first, then pass it as a callback.
+
+```js
+function greet() {
+  console.log("Hello from callback!");
+}
+
+function runCallback(callback) {
+  callback();
+}
+
+runCallback(greet);
+```
+
+---
+
+
 
