@@ -101,6 +101,77 @@ node server.js
 This command will work if you have saved the file as `server.js` and vice versa.
 ---
 
+## 📝Data types
+Data is the kind of information that the program possesses.
+
+<img src="./images/data_types.svg" alt="data types" width="500"/>
+
+They are two type of data; **Primitive** and **Composite** data types.
+
+- **Primitive** data type is the set of individual data type that make up a sentence or statement.
+
+There are different types of primitive data types
+
+- String: This includes letters, words, or sentences which are denoted starting with single quotes ('') double quotes ("") or backticks(``).
+
+```javascript
+let greeting =  "Hello World";
+var community = 'It is Dev Community'; 
+var fullName = `Hi, I am ${name}`;
+```
+
+---
+
+- Number: This represents number; integer and floating point. Examples are 5, 10, 9.6.
+
+```javascript
+var age = 30
+const simpleInterest = 30.9
+```
+
+- Boolean: This represents logical values; true and false.
+
+```javascript
+const isOpen = false;
+var isExpanded = true;
+```
+
+- Undefined: This represents unassigned variable. It is when a variable is declared but not assigned to a value.
+
+```javascript
+var greeting;
+```
+
+- Null: This represents the absence of value.
+
+```javascript
+let unSpecific = null;
+```
+
+---
+
+- **Non-primitive or Composite data type**
+
+This is the collection of primitive data types. There are three types of composite data types; arrays and object.
+
+- a. Array: An array is the collection of values. It can numbers, string and other data types as values. They are special kind of object where the key is not visible until it is accessed.
+
+```javascript
+let fruits = ["apple", "banana"];
+```
+
+<br/>
+
+- b. Objects: An object is a stand alone entity. They are true representation of data that exist in key-value pair where key is the variable. It is denoted using curly bracket {}.
+
+```javascript
+const student = {
+name: "Motunrayo", 
+age: 30, 
+language: "Yoruba" 
+}
+```
+---
 
 ## 📚 Arrays
 
@@ -307,6 +378,25 @@ let fruits = ["apple", "banana", "orange"];
 fruits.splice(1, 1, "grape");
 console.log(fruits); // ["apple", "grape", "orange"]
 ``` 
+
+<br/>
+
+#### 🔹IndexOf
+
+To find the index of a particular element of the array.
+
+```javascript
+let numbers = [1, 2, 3 , 4 ,5]
+console.log(numbers.indexOf(4)) // 3
+```
+
+This output 3 which is the position of number 4 of the array when we start indexing from one.
+
+``` javascript
+let numbers = [1, 2, 3 , 4 ,5] 
+console.log(numbers.indexOf("zero")) //-1
+```
+
 ---
 
-### 🔹IndexOf
+## DOM Manipulation
