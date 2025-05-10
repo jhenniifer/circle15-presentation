@@ -365,6 +365,7 @@ let fruits = ["apple", "banana", "orange"];
 fruits.splice(1, 1, "grape");
 console.log(fruits); // ["apple", "grape", "orange"]
 ```
+---
 
 #### 🔸ForEach
 
@@ -376,6 +377,402 @@ fruits.splice(1, 1, "grape");
 console.log(fruits); // ["apple", "grape", "orange"]
 
 ```
+
+---
+ 
+## 📚 Loops  
+
+<br/>
+
+### 🔄 What Are Loops?
+
+Loops are used to run the same block of code **multiple times**.
+
+They are useful when you want to **repeat an action**, such as iterating over a list or counting.
+
+
+
+### ✅ Why Use Loops?
+
+- To avoid repeating code manually
+- To iterate through arrays, objects, or numbers
+- To perform repeated tasks efficiently
+
+---
+
+## 🌀 Types of Loops in JavaScript
+
+<br/>
+
+
+- `for`
+- `while`
+- `do...while`
+- `for...of`
+- `for...in`
+
+<br/>
+
+### 🔸 for Loop
+
+
+Used when you know how many times to run the loop.
+
+```js
+for (let i = 0; i < 5; i++) {
+  console.log("Number:", i);
+}
+```
+---
+
+Output
+
+```js
+Number: 0  
+Number: 1  
+Number: 2  
+Number: 3  
+Number: 4
+```
+
+<br/>
+
+### 🔹 Example: Looping Through an Array
+
+```js
+const fruits = ["apple", "banana", "cherry"];
+
+for (let i = 0; i < fruits.length; i++) {
+  console.log(fruits[i]);
+}
+
+```
+<br/>
+Output
+
+```js
+apple  
+banana  
+cherry
+
+```
+---
+
+### 🔸while Loop
+
+
+Runs while a condition is true.
+
+```js
+let i = 0;
+while (i < 10) {
+  console.log("Count:", i);
+  i++;
+}
+
+```
+
+Output
+
+```js
+Count: 0  
+Count: 1  
+Count: 2
+Count: 3
+Count: 4
+Count: 5  
+Count: 6
+Count: 7
+Count: 8
+Count: 9
+
+
+```
+---
+
+### 🔸do...while Loop
+
+Runs at least once, then continues while condition is true.
+
+```js
+let i = 0;
+do {
+  console.log("Step:", i);
+  i++;
+} while (i < 2);
+
+
+```
+
+Output
+
+```js
+Step: 0  
+Step: 1
+
+```
+<br/>
+
+### 🔸for...of Loop
+
+Loops through the values of an iterable like an array.
+
+```js
+const colors = ["red", "blue", "green"];
+
+for (let color of colors) {
+  console.log(color);
+}
+
+```
+---
+
+Output
+
+```js
+red  
+blue  
+green
+```
+<br/>
+
+### 🔸for...in Loop
+
+Loops through the keys/indexes of an object or array. This can be used to loop through objects as well.
+
+```js
+const student = {
+  name: "Jhennifer",
+  age: 22,
+  course: "Frontend"
+};
+
+for (let key in student) {
+  console.log(key + ": " + student[key]);
+}
+
+
+```
+---
+
+Output
+
+```js
+name: Jhennifer  
+age: 22  
+course: Frontend
+
+```
+
+<br/>
+
+### 🔸break and continue
+
+###### break : exits the loop early
+
+###### continue: skips to the next iteration
+
+<br/>
+```js
+for (let i = 0; i < 5; i++) {
+  if (i === 3) break;
+  console.log(i);
+}
+
+```
+
+Output
+
+```js
+0  
+1  
+2
+
+```
+---
+
+```js
+for (let i = 0; i < 5; i++) {
+  if (i === 2) continue;
+  console.log(i);
+}
+
+
+```
+
+Output
+
+```js
+0  
+1  
+3  
+4
+
+```
+
+<br/>
+
+---
+
+
+## 📚 Objects
+
+<br/>
+
+ ### ✅ What Are Objects?
+
+Objects are **collections of key-value pairs** where keys (or properties) are strings and their values can be any data type. These values can be strings, numbers, booleans, arrays, functions, or even other objects. They let you group related data and functions together. 
+In JavaScript, almost everything is an object — arrays, functions, and even dates!
+
+<br/>
+
+### ✅ Basic Syntax
+
+```js
+const person = {
+  name: "Jhennifer",
+  age: 22,
+  isStudent: true
+};
+```
+<br>
+
+### 🧾 Accessing Object Properties
+
+There is more than one way to access object values. You can use the **dot notation** or **bracket notation**.
+
+---
+
+#### Dot Notation
+
+Use dot notation to directly access a property by name.
+
+```js
+const car = {
+    brand: Toyota,
+    model: Corolla,
+    year: 2020
+}
+
+console.log(car.brand); // Toyota
+```
+<br>
+
+#### Bracket Notation
+
+Use bracket notation when property names are dynamic or contain special characters.
+
+```js
+const car = {
+    brand: Toyota,
+    model: Corolla,
+    year: 2020
+}
+
+console.log(car['model']); // Corolla
+```
+
+---
+
+### ✍️ Modifying Object Properties
+
+You can update or add new properties like this:
+
+
+```js
+person.age = 23;
+person.course = "Frontend Development";
+```
+
+**Resulting object:**
+
+```js
+{
+  name: "Jhennifer",
+  age: 23,
+  isStudent: true,
+  course: "Frontend Development"
+}
+```
+
+<br>
+
+### ❌ Deleting a Property
+
+```js
+delete person.isStudent;
+```
+
+Now the `isStudent` property is removed from the object.
+
+---
+
+### 🔁 Looping Through an Object
+
+Use `for...in` to loop through the keys:
+
+```js
+for (let key in person) {
+  console.log(key + ": " + person[key]);
+}
+```
+
+<br>
+
+### ✅ Object Methods
+
+Objects can have **methods** — functions stored as property values.
+
+
+```js
+const dog = {
+  name: "Snow",
+  bark: function() {
+    console.log("Woof!");
+  }
+};
+
+dog.bark(); // Woof!
+```
+
+---
+
+### ✅ Nested Objects
+
+Objects can be nested inside other objects.
+
+```js
+const user = {
+  name: "Chioma",
+  address: {
+    city: "Lagos",
+    country: "Nigeria"
+  }
+};
+
+console.log(user.address.city); // Lagos
+```
+
+
+## 🧪 Example: Object with Array and Method
+
+```js
+const student = {
+  name: "Ada",
+  subjects: ["Math", "English", "Science"],
+  greet: function() {
+    return "Hello, I'm " + this.name;
+  }
+};
+
+console.log(student.greet()); // Hello, I'm Ada
+```
+
+
+
+
+
+
 
 ---
 
@@ -594,3 +991,4 @@ container.style.background =‘lightblue’
 ```
 
 ---
+

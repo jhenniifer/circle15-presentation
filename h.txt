@@ -1,107 +1,321 @@
+# JavaScript Presentation Slides (Markdown Format)
 
-# 🚀 What is a Function?
+---
 
-A **function** is a reusable block of code designed to perform a specific task. It helps break your program into smaller, manageable parts. You can call a function multiple times without rewriting code.
+## ARRAYS
 
+### What is an Array?
 
-## 📚 Function Syntax
+An array is a data structure used to store **multiple values of the same type** in a single variable.
+
+There are two types of arrays:
+
+* **One-dimensional (1D)** – A simple list of elements.
+* **Multi-dimensional (2D, 3D, etc.)** – Arrays of arrays, like matrices.
+
+### Example in Different Languages:
 
 ```js
-function functionName(parameters) {
-  // code to be executed
-}
+// JavaScript
+let arr = [1, 2, 3, 4];
 ```
 
- Example
+```python
+# Python
+arr = [1, 2, 3, 4]
+```
+
+```cpp
+// C++
+int arr[4] = {1, 2, 3, 4};
+```
+
+```java
+// Java
+int[] arr = {1, 2, 3, 4};
+```
+
+### Common Array Methods in JavaScript
+
+#### 1. `push()` – Adds an element to the end of an array
 
 ```js
- function greet(name) {
-  console.log("Hello, " + name + "!");
-}
+let fruits = ['apple', 'banana'];
+fruits.push('orange');
+console.log(fruits); // ['apple', 'banana', 'orange']
+```
 
-greet("Jhennifer");
+#### 2. `pop()` – Removes the last element from an array
+
+```js
+fruits.pop();
+console.log(fruits); // ['apple', 'banana']
+```
+
+#### 3. `shift()` – Removes the first element from an array
+
+```js
+fruits.shift();
+console.log(fruits); // ['banana']
+```
+
+#### 4. `unshift()` – Adds an element to the beginning
+
+```js
+fruits.unshift('mango');
+console.log(fruits); // ['mango', 'banana']
+```
+
+#### 5. `splice()` – Adds/removes elements at a specific index
+
+```js
+fruits.splice(1, 0, 'grape');
+console.log(fruits); // ['mango', 'grape', 'banana']
+```
+
+#### 6. `slice()` – Returns a shallow copy of a portion
+
+```js
+let sliced = fruits.slice(0, 2);
+console.log(sliced); // ['mango', 'grape']
+```
+
+#### 7. `indexOf()` – Finds the index of an element
+
+```js
+console.log(fruits.indexOf('grape')); // 1
+```
+
+#### 8. `includes()` – Checks if an element exists
+
+```js
+console.log(fruits.includes('banana')); // true
 ```
 
 ---
 
-## 🧰 Types of Function
+## FUNCTIONS
 
+### What is a Function?
 
-- Function Declaration
+A function is a reusable block of code designed to perform a task.
+
+### Function Declaration
+
 ```js
-function add(a, b) {
-  return a + b;
+function greet(name) {
+  console.log('Hello, ' + name);
 }
 
-console.log(add(3, 4)); // 7
+greet('Jhennifer'); // Hello, Jhennifer
 ```
 
-- Function Expression
+### Function Expression
+
 ```js
-const multiply = function (x, y) {
-  return x * y;
+const greet = function(name) {
+  console.log('Hi ' + name);
 };
 
-console.log(multiply(5, 2)); // 10
-
+greet('Chioma');
 ```
 
-- Arrow Function (ES6)
+### Arrow Functions
 
-##### This is a shorter and cleaner way to write functions.
 ```js
-const divide = (a, b) => a / b;
-
-console.log(divide(10, 2)); // 5
-
-
+const add = (a, b) => a + b;
+console.log(add(2, 3)); // 5
 ```
----
 
-- Anonymous Function 
+### Parameters vs Arguments
 
-##### Functions without a name, often used as callbacks.
-```js
-setTimeout(function () {
-  console.log("This runs after 2 seconds");
-}, 2000);
+* **Parameters** are the names listed in the function definition.
+* **Arguments** are the real values passed to the function.
 
-```
-<br/>
-
-## 🔄 Returning Values from Functions
-#### Functions can return values using the return keyword.
+### Return Statement
 
 ```js
-function square(num) {
-  return num * num;
+function square(x) {
+  return x * x;
 }
 
-const result = square(6);
-console.log(result); // 36
+let result = square(4);
+console.log(result); // 16
 ```
-<br/>
-
-## ⚙️ Parameters vs Arguments
-Parameters are variables in function definition. Arguments on the other hand are actual values passed when calling the function
 
 ---
 
+## LOOPS
+
+### What are Loops?
+
+Loops are used to repeat a block of code a number of times.
+
+### 1. For Loop
+
 ```js
-Copy code
-function sayHello(name) {  // name is a parameter
-  console.log("Hello, " + name);
+for (let i = 0; i < 5; i++) {
+  console.log(i);
 }
-
-sayHello("Chioma"); // "Chioma" is the argument
 ```
-<br/>
 
-## ✅ Why Use Functions?
-1. Improves code reusability
+### 2. While Loop
 
-2. Easier debugging
+```js
+let i = 0;
+while (i < 5) {
+  console.log(i);
+  i++;
+}
+```
 
-3. Clean and organized code
+### 3. Do...While Loop
 
-4. Helps divide complex problems
+```js
+let i = 0;
+do {
+  console.log(i);
+  i++;
+} while (i < 5);
+```
+
+### 4. For...of Loop (used with arrays)
+
+```js
+let colors = ['red', 'green', 'blue'];
+for (let color of colors) {
+  console.log(color);
+}
+```
+
+### 5. For...in Loop (used with objects)
+
+```js
+let person = { name: 'Jhennifer', age: 22 };
+for (let key in person) {
+  console.log(key + ': ' + person[key]);
+}
+```
+
+---
+
+## OBJECTS
+
+### What is an Object?
+
+Objects store data in **key-value pairs** and are one of the fundamental building blocks in JavaScript.
+
+```js
+const car = {
+  brand: 'Toyota',
+  model: 'Corolla',
+  year: 2020
+};
+```
+
+### Accessing Object Properties
+
+#### Dot Notation
+
+Use dot notation to directly access a property by name.
+
+```js
+console.log(car.brand); // Toyota
+```
+
+#### Bracket Notation
+
+Use bracket notation when property names are dynamic or contain special characters.
+
+```js
+console.log(car['model']); // Corolla
+```
+
+### Adding/Updating Properties
+
+You can add new properties or update existing ones using dot or bracket notation.
+
+```js
+car.color = 'Red';
+car.year = 2022;
+```
+
+### Deleting Properties
+
+Remove a property from an object using the `delete` keyword.
+
+```js
+delete car.model;
+```
+
+### Nested Objects
+
+Objects can contain other objects as values, creating a nested structure.
+
+```js
+const user = {
+  name: 'Jhennifer',
+  address: {
+    city: 'Lagos',
+    country: 'Nigeria'
+  }
+};
+
+console.log(user.address.city); // Lagos
+```
+
+### Object Methods
+
+Functions can be stored as object properties—these are called methods.
+
+```js
+const dog = {
+  name: 'Lucky',
+  bark: function () {
+    console.log('Woof!');
+  }
+};
+
+dog.bark(); // Woof!
+```
+
+### Shorthand Method
+
+You can write methods in a shorthand syntax.
+
+```js
+const cat = {
+  name: 'Milo',
+  meow() {
+    console.log('Meow!');
+  }
+};
+
+cat.meow(); // Meow!
+```
+
+### Looping Through an Object
+
+Use a `for...in` loop to iterate through all keys in an object.
+
+```js
+const student = {
+  name: 'Chioma',
+  age: 22,
+  course: 'Philosophy'
+};
+
+for (let key in student) {
+  console.log(key + ': ' + student[key]);
+}
+```
+
+---
+
+*You're doing great, Jhen Jhen 💖. Just copy and paste this entire markdown into your VS Code slide and you're good to go!*
+
+
+
+,
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist"
